@@ -1,0 +1,40 @@
+.Header-start
+{
+   
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #4F008C;
+    color: #FFFFFF;
+}
+
+.Header-box
+{
+    
+    height: 2rem;
+    width: 20%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+.Header-innderbox
+{
+   
+    height:1rem;
+   
+    min-height: 5vh;
+    
+
+}
+.Navigation-list
+{
+  
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    width: 14rem;
+}
