@@ -50,6 +50,8 @@ export default {
     // };
     const store = useCounterStore();
 
+    console.log(store.projectHostUrl)
+
     onMounted(async () => {
       try {
         const response = await fetchData(hostUrl + `&pageSize=${pageSize.value}`);
@@ -233,7 +235,7 @@ export default {
                   fontSize: '16px',
                   backgroundColor: '#f1f1f1',
                 }"
-                  @click="keyName.Name === 'Programs' ? store.changePage('project-list-page', item.id) : store.changePage('project-tabs-page', item.id)">
+                  @click="keyName.Name === 'Programs' ? store.changePage('project-list-page', item.id) : store.changePage('project-tabs-page')">
                   open
                 </button>
               </td>

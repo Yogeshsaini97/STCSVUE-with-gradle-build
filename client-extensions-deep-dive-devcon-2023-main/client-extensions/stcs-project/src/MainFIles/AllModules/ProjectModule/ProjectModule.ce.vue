@@ -12,7 +12,7 @@
 
 <script setup>
 import ListPage from "./Components/Listing/ListPage.ce.vue";
-import ProjectTabs from "./Components/Tabs/ProjectTabs/ProjectTabs.ce.vue";
+import ProjectTabs from "./Components/Tabs/ProjectTabs.ce.vue";
 import { useCounterStore } from "../../../Stores/Store";
 
 const store = useCounterStore();

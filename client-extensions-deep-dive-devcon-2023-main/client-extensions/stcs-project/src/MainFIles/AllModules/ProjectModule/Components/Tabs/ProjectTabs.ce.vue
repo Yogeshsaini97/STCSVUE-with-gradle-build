@@ -1,9 +1,12 @@
 <script setup>
-  import { createApp } from 'vue'
-	import Tabs from '../Tabs.vue'
-	import Tab from '../Tab.vue'
-import Header from '../../ReusableComponents/Header.ce.vue';
-import { useCounterStore } from '../../../../../../Stores/Store';
+import { createApp } from 'vue'
+import Tabs from './ProjectTabs/Tabs.vue'
+import Tab from './ProjectTabs/Tab.vue'
+import Header from '../ReusableComponents/Header.ce.vue';
+import { useCounterStore } from '../../../../../Stores/Store';
+import RiskIssues from './TabFiles/Risk&Issues.vue';
+import Overview from "./TabFiles/Overview.vue"
+
 
 const store=useCounterStore();
 let NextPage;
@@ -44,7 +47,6 @@ export default {
       <div class="Header-innderbox"><button
           @click="store.changePage(prevPage)">Back</button>
       </div>
-
       <div class="Header-innderbox">
         <!-- <div>{{ keyName.Name }}</div> -->
         <!-- <div class="Navigation-list">Dashboard > Programs > {{ keyName.NavUrl }}</div> -->
@@ -64,16 +66,16 @@ export default {
 
   <!-- header-ends  -->
 	<Tabs>
-  	<Tab active="true" title="First Tab">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida purus vitae vulputate commodo.
+  	<Tab active="true" title="Overview">
+      <Overview/>
     </Tab>
-  	<Tab title="Second Tab">
+  	<Tab title="Milestones">
       Cras scelerisque, dolor vitae suscipit efficitur, risus orci sagittis velit, ac molestie nulla tortor id augue.
     </Tab>
-  	<Tab title="Third Tab">
-      Morbi posuere, mauris eu vehicula tempor, nibh orci consectetur tortor, id eleifend dolor sapien ut augue.
+  	<Tab title="Risk & Issues">
+      <RiskIssues/>
     </Tab>
-  	<Tab title="Fourth Tab">
+  	<Tab title="Documents">
       Aenean varius dui eget ante finibus, sit amet finibus nisi facilisis. Nunc pellentesque, risus et pretium hendrerit.
     </Tab>
   </Tabs>
